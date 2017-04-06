@@ -1,0 +1,5 @@
+  applications:
+  - name: ICD-api-lannaman
+    host: icd-api-lannaman
+    memory: 128M
+    command: rake db:migrate && bin/rails server -p $PORT -e $RAILS_ENV

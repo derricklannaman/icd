@@ -1,4 +1,4 @@
-class Api::V1::Icd10sController < ApplicationController
+class Api::V1::Icd10sController < ApiController
   before_action :set_icd10
 
   def show
