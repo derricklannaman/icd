@@ -1,3 +1,3 @@
 class Icd10 < ApplicationRecord
-  searchkick
+  searchkick text_start: [:description]
 end

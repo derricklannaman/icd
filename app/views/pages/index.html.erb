@@ -1,0 +1,24 @@
+<div class="col-md-6">
+  <% if @codes.present? %>
+  <div class="row">
+    <%= " Total results: #{@search_results.total_count}"  %>
+  </div>
+    <% @codes.each_with_index do |result, i| %>
+      <% if i == 0 %>
+        <div class="row top-match">
+      <% else %>
+        <div class="row group-match">
+      <% end %>
+        <%= result.code %>
+        <%= result.description %>
+        <%= result.code_system %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="col-md-6">
+  <div class="row">
+  </div>
+</div>
+

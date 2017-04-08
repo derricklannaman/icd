@@ -10,6 +10,36 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require jquery-ui
  *= require_tree .
  *= require_self
  */
+
+
+input#q {
+  width: 250px;
+  height: 40px;
+  font-size: 20px;
+}
+
+button.search-btn {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  top: -3px;
+  left: -44px;
+}
+
+.row.top-match, .row.group-match {
+  border: 1px solid #B5E196;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.row.top-match {
+  background-color: #B5E196;
+  border: 4px solid #85BB5E;
+  padding: 40px;
+}

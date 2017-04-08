@@ -3,12 +3,36 @@
   <head>
     <title>Icd</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="https://use.fontawesome.com/4caabbd473.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <header>
+          <h1>ICD Search</h1>
+          <%= form_tag search_path, method: :get do %>
+            <%= text_field_tag :q, nil, placeholder: "word or code" %>
+
+            <%= button_tag(type: 'submit', class: "search-btn") do %>
+              <span><i class="fa fa-search" aria-hidden="true"></i></span>
+            <% end %>
+
+          <% end %>
+        </header>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
+
   </body>
 </html>
